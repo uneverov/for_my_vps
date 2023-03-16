@@ -10,7 +10,7 @@ def page_1():
 
 @app.route('/download_gpal')
 def download_gpal():
-    path = r"C:\Users\Uneverov\PycharmProjects\for_my_vps\gpal.rar"
+    path = "/for_my_vps/gpal.rar"
     return send_file(path, as_attachment=True)
 
 
