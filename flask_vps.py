@@ -21,4 +21,4 @@ def download_game_1():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=8000)
+    app.run(debug=True, host='194.58.107.248', port=5000)
