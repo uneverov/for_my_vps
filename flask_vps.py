@@ -1,5 +1,5 @@
 from flask import Flask, render_template, send_file
-
+import os
 app = Flask(__name__)
 
 
@@ -10,9 +10,15 @@ def page_1():
 
 @app.route('/download_gpal')
 def download_gpal():
-    path = "/for_my_vps/gpal.rar"
+    path = f"{os.getcwd()}{os.sep}gpal.rar"
+    return send_file(path, as_attachment=True)
+
+
+@app.route('/download_game_1')
+def download_game_1():
+    path = f"{os.getcwd()}{os.sep}catch_a_square.rar"
     return send_file(path, as_attachment=True)
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='194.58.107.248', port=5000)
+    app.run(debug=True, host='localhost', port=8000)
