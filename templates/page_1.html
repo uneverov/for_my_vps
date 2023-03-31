@@ -5,6 +5,28 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='page_1.css') }}">
   </head>
   <body>
-    <p><a href="{{ url_for('download_gpal') }}">Download gpal</a></p>
+    <div class="cursor"></div>
+    <div class="links" style="padding-top:30px;">
+      <p><a href="{{ url_for('download_gpal') }}">Download gpal</a></p>
+      <p><a href="{{ url_for('download_game_1') }}">Download catch-a-square</a></p>
+    </div>
+  <script>
+
+    const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+
+  </script>
+
   </body>
 </html>
