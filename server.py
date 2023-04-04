@@ -4,7 +4,7 @@ from urllib.parse import unquote
 host_name = "194.58.107.248"
 server_port = 20
 #asd
-
+#asd
 class MyServer(BaseHTTPRequestHandler):
     chat_text = []
 
