@@ -8,6 +8,10 @@ server_port = 20
 #asd
 #asd
 asd
+#asd
+#asd
+#asd
+#asd
 class MyServer(BaseHTTPRequestHandler):
     chat_text = []
 
