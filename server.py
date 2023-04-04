@@ -5,7 +5,7 @@ host_name = "194.58.107.248"
 server_port = 20
 test = 'a'
 test = 'a'
-
+test = 'a'
 class MyServer(BaseHTTPRequestHandler):
     chat_text = []
 
